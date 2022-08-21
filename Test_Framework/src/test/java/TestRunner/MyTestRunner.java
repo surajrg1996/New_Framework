@@ -11,7 +11,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions
 
 	(
-			features="src/test/resources/features",
+			features="src/test/resources/features/login_page.feature",
 			glue={"stepdefinitions","AppHooks" },
 			dryRun= false,
 			monochrome=true,
