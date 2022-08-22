@@ -11,7 +11,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions
 
 	(
-			features="src/test/resources/features/login_page.feature",
+			features="src/test/resources/features",
 			glue={"stepdefinitions","AppHooks" },
 			dryRun= false,
 			monochrome=true,
@@ -25,5 +25,7 @@ import io.cucumber.junit.CucumberOptions;
 
 
 public class MyTestRunner {
+	
+	
 
 }

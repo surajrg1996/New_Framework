@@ -55,14 +55,14 @@ public class Login_page {
 		
 	}
 	
-	public void doLogin(String un, String pwd) {
+	public tabPage doLogin(String un, String pwd) {
 		
 		System.out.println("Login with username: " +un+ " and password "+ pwd);
 		driver.findElement(user).sendKeys(un);
 		driver.findElement(passWord).sendKeys(pwd);
 		driver.findElement(signInButton).click();
 		
-			
+			return new tabPage(driver);
 		
 		
 	}
