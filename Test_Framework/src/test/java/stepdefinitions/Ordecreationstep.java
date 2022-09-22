@@ -16,9 +16,6 @@ public class Ordecreationstep {
 	private oderCreationPage orderpage= new oderCreationPage(DriverFactory.getDriver());
 	
 	
-	
-	
-	
 	@Given("Redirect to Home Page")
 	public void redirect_to_home_page() {
 		DriverFactory.getDriver().get("https://lynx-dev.entercoms.com/#");
@@ -27,16 +24,7 @@ public class Ordecreationstep {
 		System.out.println("login page title is :"+ title);
 	}
 
-	@Then("Login to application")
-	public void login_to_application() throws InterruptedException {
-		
-			
-		orderpage.dologin();
-		
-		orderpage.SSOlogin();
-
-	}
-
+	
 	@Then("Select dropdown and select LYNX-North America")
 	public void select_dropdown_and_select_lynx_north_america() {
 		
@@ -87,7 +75,7 @@ public class Ordecreationstep {
 	}
 
 	@Then("Select the date & Apply")
-	public void select_the_date_apply() {
+	public void select_the_date_apply() throws InterruptedException {
 	   orderpage.selectdate();
 	}
 

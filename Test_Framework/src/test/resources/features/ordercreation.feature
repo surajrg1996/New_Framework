@@ -2,8 +2,7 @@ Feature: Order submit & verification
 
   Scenario: Order creation & verfication
     Given Redirect to Home Page
-    Then Login to application
-    And Select dropdown and select LYNX-North America
+    Then Select dropdown and select LYNX-North America
     When Click on Order Creation
     Then Enter Order id details
     And Submit Order ID Details

@@ -1,13 +1,6 @@
 package Page_object_Model;
 
-import java.io.File;
-import java.io.IOException;
-
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 
@@ -17,12 +10,12 @@ private WebDriver driver;
 	
 	//Element by locators
 	
-	private  By username= By.xpath("//input[@id='1-email']");
-	private By password= By.xpath("//input[@placeholder='your password']");
-	private By LogIn= By.xpath("//span[@class='auth0-label-submit']");
-	private By usernamecloud = By.xpath("//input[@placeholder='User Email Address']");
-	private By passwordcloud = By.xpath("//input[@placeholder='Password']");
-	private By SSOlogin= By.xpath("//button[@type='submit']");
+//	private  By username= By.xpath("//input[@id='1-email']");
+//	private By password= By.xpath("//input[@placeholder='your password']");
+//	private By LogIn= By.xpath("//span[@class='auth0-label-submit']");
+//	private By usernamecloud = By.xpath("//input[@placeholder='User Email Address']");
+//	private By passwordcloud = By.xpath("//input[@placeholder='Password']");
+//	private By SSOlogin= By.xpath("//button[@type='submit']");
 	private By  headeroption= By.xpath("//a[@class='bx--header__menu-item bx--header__menu-title']//*[name()='svg']");
 	private By northoption= By.xpath("//a[normalize-space()='LYNX - North America']");
 	private By orderCreationButton= By.xpath("//div[@class='app--row']//div[1]//div[2]//div[1]");
@@ -50,14 +43,14 @@ private WebDriver driver;
 	private By trackingbutton= By.xpath("//span[normalize-space()='Tracking']");
 	
 	
-	private By calenderfrom= By.xpath("//input[@id='datepicker-22-input']");
-	//private By fromdate= By.xpath("//span[@aria-label='July 1, 2022']");
-	private By calenderto= By.xpath("//ibm-date-picker[@label='To']//div[@class='bx--date-picker-input__wrapper']");
-	//private By toDate= By.xpath("//div[@class='flatpickr-calendar animate showTimeInput bx--date-picker__calendar arrowTop open']//span[@aria-label='August 1, 2022'][normalize-space()='1']");
+//	private By calenderfrom= By.xpath("//input[@id='datepicker-22-input']");
+//	private By fromdate= By.xpath("//input[@id='datepicker-7-input']");
+//	private By calenderto= By.xpath("//ibm-date-picker[@label='To']//div[@class='bx--date-picker-input__wrapper']");
+//	private By toDate= By.xpath("//input[@id='datepicker-8-input']");
 	private By dateApply= By.xpath("//button[@class='apply-button flex__item--bottom right--margin bx--btn bx--btn--primary bx--btn--sm']");
-	private By selectallcheckbox= By.xpath("//div[@class='selectall selectall-checked']//div//*[name()='svg']//*[name()='path' and contains(@d,'M13 24L4 1')]");
-	private By closebutton= By.xpath("//button[normalize-space()='Close']");
-	private By backbutton= By.xpath("//button[@class='bx--btn bx--btn--secondary']");
+//	private By selectallcheckbox= By.xpath("//div[@class='selectall selectall-checked']//div//*[name()='svg']//*[name()='path' and contains(@d,'M13 24L4 1')]");
+//	private By closebutton= By.xpath("//button[normalize-space()='Close']");
+//	private By backbutton= By.xpath("//button[@class='bx--btn bx--btn--secondary']");
 	private By userprofile= By.xpath("//*[name()='path' and contains(@d,'M16 4a5 5 ')]");
 	private By logout= By.xpath("/html[1]/body[1]/ibm-overflow-menu-pane[1]/ul[1]/ibm-overflow-menu-option[2]/button[1]");
 	
@@ -75,16 +68,16 @@ private WebDriver driver;
 		return driver.getTitle();
 	}
 	
-	public void dologin() {
-		driver.findElement(username).sendKeys("kmahajan@baxterplanning.com");
-		driver.findElement(LogIn).click();
-	}
-	
-	public void SSOlogin() {
-		driver.findElement(usernamecloud).sendKeys("kmahajan@baxterplanning.com");
-		driver.findElement(passwordcloud).sendKeys("W3lc0me@Baxter1");
-		driver.findElement(SSOlogin).click();
-	}
+//	public void dologin() {
+//		driver.findElement(username).sendKeys("sgawande@baxterplanning.com");
+//		driver.findElement(LogIn).click();
+//	}
+//	
+//	public void SSOlogin() {
+//		driver.findElement(usernamecloud).sendKeys("sgawande@baxterplanning.com");
+//		driver.findElement(passwordcloud).sendKeys("Nandu@123");
+//		driver.findElement(SSOlogin).click();
+//	}
 	
 	public void northheaderselect() {
 		Actions act= new Actions(driver);
@@ -182,28 +175,33 @@ private WebDriver driver;
 		
 	}
 	
-	public void selectdate() {
+	public void selectdate() throws InterruptedException {
 		
-		
-		driver.findElement(calenderfrom).clear();
-		driver.findElement(calenderfrom).sendKeys("07/01/2022");
-		
-		driver.findElement(calenderto).clear();
-		driver.findElement(calenderto).sendKeys("08/01/2022");
-		
+//		Actions dateselect= new Actions(driver);
+//		Thread.sleep(1000);
+//		dateselect.moveToElement(driver.findElement(By.xpath("//span[@aria-label='August 1, 2022']"))).click().perform();;
+//		
+//		driver.findElement(fromdate).click();
+//		driver.findElement(fromdate).clear();
+//		driver.findElement(fromdate).sendKeys("07/01/2022");
+//		
+//		driver.findElement(toDate).click();
+//		driver.findElement(toDate).clear();
+//		driver.findElement(toDate).sendKeys("08/01/2022");
+//		
 		driver.findElement(dateApply).click();;
 		
 	}
 	
 	public void selectorderdetails() {
 		
-		driver.findElement(selectallcheckbox).click();
-		driver.findElement(closebutton);
-		
-		Alert alert= driver.switchTo().alert();
-		
-		alert.dismiss();
-		
+//		driver.findElement(selectallcheckbox).click();
+//		driver.findElement(closebutton);
+//		
+//		Alert alert= driver.switchTo().alert();
+//		
+//		alert.dismiss();
+		driver.getTitle();
 		
 	}
 	
